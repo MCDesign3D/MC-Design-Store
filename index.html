@@ -6,14 +6,149 @@
   <title>MC Design Store</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <header class="header">
-    <h1>MC Design</h1>
+  <!-- TOP HERO (imagen superior como tu ejemplo) -->
+  <header class="top-hero" style="background-image:url('assets/img/hero-top.jpg');">
+    <div class="top-hero__overlay">
+      <div class="container top-hero__bar">
+        <div class="brand">
+          <span class="brand__mark">MC</span>
+          <div class="brand__text">
+            <div class="brand__name">MC DESIGN</div>
+            <div class="brand__tagline">Ropa & Personalizados</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#video">Video</a>
+          <a href="#ropa">Ropa</a>
+          <a href="#impresiones">Impresiones 3D</a>
+          <a href="#pedido">Pedido</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Playeras, sudaderas y artículos 3D personalizados</h2>
+  <!-- SECCIÓN VIDEO (igual a la imagen) -->
+  <section id="video" class="section">
+    <div class="container">
+      <h2 class="title">Mira Nuestro Video</h2>
+      <div class="divider"></div>
+
+      <div class="video-card">
+        <!-- OPCIÓN A: YouTube (recomendado) -->
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="MC Design Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- OPCIÓN B: Video local (descomenta si lo usas)
+        <video class="video-local" controls poster="assets/img/hero-top.jpg">
+          <source src="assets/video/demo.mp4" type="video/mp4" />
+        </video>
+        -->
+      </div>
+
+      <div class="cta-block">
+        <a id="btnVideoWA" class="btn btn--green" href="#" target="_blank" rel="noopener">
+          Ordenar por WhatsApp
+        </a>
+        <div class="cta-phone" id="phoneText">+52 XXX XXX XXXX</div>
+      </div>
+    </div>
   </section>
+
+  <!-- ROPA PERSONALIZADA -->
+  <section id="ropa" class="section">
+    <div class="container">
+      <h2 class="title">Ropa Personalizada</h2>
+      <div class="divider"></div>
+
+      <div class="grid grid--4">
+        <article class="product">
+          <img src="assets/img/ropa1.jpg" alt="Producto 1">
+          <div class="product__info">
+            <div class="product__price">Desde $200 MXN</div>
+            <a class="btn btn--amber wa-product" data-product="Playera personalizada" data-price="Desde $200 MXN" href="#" target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="assets/img/ropa2.jpg" alt="Producto 2">
+          <div class="product__info">
+            <div class="product__price">Desde $200 MXN</div>
+            <a class="btn btn--amber wa-product" data-product="Playera diseño especial" data-price="Desde $200 MXN" href="#" target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="assets/img/ropa3.jpg" alt="Producto 3">
+          <div class="product__info">
+            <div class="product__price">Desde $350 MXN</div>
+            <a class="btn btn--amber wa-product" data-product="Hoodie / Sudadera" data-price="Desde $350 MXN" href="#" target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="assets/img/ropa4.jpg" alt="Producto 4">
+          <div class="product__info">
+            <div class="product__price">Desde $50 MXN</div>
+            <a class="btn btn--amber wa-product" data-product="Accesorio / Bolsa" data-price="Desde $50 MXN" href="#" target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPRESIONES 3D -->
+  <section id="impresiones" class="section">
+    <div class="container">
+      <h2 class="title">Impresiones 3D</h2>
+      <p class="subtitle">Impresión 3D bajo pedido, colores y medidas personalizadas.</p>
+
+      <div class="gallery">
+        <img src="assets/img/imp1.jpg" alt="imp1">
+        <img src="assets/img/imp2.jpg" alt="imp2">
+        <img src="assets/img/imp3.jpg" alt="imp3">
+        <img src="assets/img/imp4.jpg" alt="imp4">
+        <img src="assets/img/imp5.jpg" alt="imp5">
+        <img src="assets/img/imp6.jpg" alt="imp6">
+        <img src="assets/img/imp7.jpg" alt="imp7">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="pedido" class="section section--cta">
+    <div class="container">
+      <div class="bigline">¿TIENES UNA IDEA? <span>NOSOTROS</span> LA HACEMOS <span>REAL</span>.</div>
+
+      <a id="btnFinalWA" class="btn btn--green btn--xl" href="#" target="_blank" rel="noopener">
+        Hacer pedido por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <div>© <span id="year"></span> MC Design</div>
+      <div class="muted">Hecho para GitHub Pages</div>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

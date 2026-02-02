@@ -13,20 +13,24 @@
   <header class="top-hero" style="background-image:url('assets/img/hero-top.png');">
     <div class="top-hero__overlay">
       <div class="container top-hero__bar">
-        <div class="brand">
-          <span class="brand__mark">MC</span>
+
+        <!-- MARCA -->
+        <a class="brand" href="#video">
+          <img src="assets/img/logo-mcdesign.png" alt="MC Design" class="brand__logo">
           <div class="brand__text">
             <div class="brand__name">MC DESIGN</div>
             <div class="brand__tagline">Ropa & Personalizados</div>
           </div>
-        </div>
+        </a>
 
+        <!-- NAVEGACIÓN -->
         <nav class="nav">
           <a href="#video">Video</a>
           <a href="#ropa">Ropa</a>
           <a href="#impresiones">Impresiones 3D</a>
           <a href="#pedido">Pedido</a>
         </nav>
+
       </div>
     </div>
   </header>
@@ -37,7 +41,6 @@
       <h2 class="title">Mira Nuestro Video</h2>
       <div class="divider"></div>
 
-      <!-- YouTube Embed (Short) -->
       <div class="video-card">
         <div class="video-embed">
           <iframe
@@ -50,7 +53,6 @@
         </div>
       </div>
 
-      <!-- CTA debajo del video -->
       <div class="cta-block">
         <a id="btnVideoWA" class="btn btn--green" href="#" target="_blank" rel="noopener">
           Ordenar por WhatsApp
@@ -60,68 +62,46 @@
     </div>
   </section>
 
-  <!-- ROPA PERSONALIZADA -->
+  <!-- ROPA -->
   <section id="ropa" class="section">
     <div class="container">
       <h2 class="title">Ropa Personalizada</h2>
       <div class="divider"></div>
 
       <div class="grid grid--4">
+
         <article class="product">
-          <img src="assets/img/ropa1.jpg" alt="Playera personalizada">
+          <img src="assets/img/ropa1.png" alt="Playera personalizada">
           <div class="product__info">
             <div class="product__price">Desde $200 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Playera personalizada"
-               data-price="Desde $200 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+            <a class="btn btn--amber wa-product" data-product="Playera personalizada" data-price="Desde $200 MXN" href="#">Cotizar por WhatsApp</a>
           </div>
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa2.jpg" alt="Playera diseño especial">
+          <img src="assets/img/ropa2.png" alt="Playera diseño especial">
           <div class="product__info">
             <div class="product__price">Desde $200 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Playera diseño especial"
-               data-price="Desde $200 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+            <a class="btn btn--amber wa-product" data-product="Playera diseño especial" data-price="Desde $200 MXN" href="#">Cotizar por WhatsApp</a>
           </div>
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa3.jpg" alt="Sudadera personalizada">
+          <img src="assets/img/ropa3.png" alt="Sudadera personalizada">
           <div class="product__info">
             <div class="product__price">Desde $350 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Hoodie / Sudadera"
-               data-price="Desde $350 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+            <a class="btn btn--amber wa-product" data-product="Hoodie / Sudadera" data-price="Desde $350 MXN" href="#">Cotizar por WhatsApp</a>
           </div>
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa4.jpg" alt="Accesorio personalizado">
+          <img src="assets/img/ropa4.png" alt="Accesorio personalizado">
           <div class="product__info">
             <div class="product__price">Desde $50 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Accesorio / Bolsa"
-               data-price="Desde $50 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+            <a class="btn btn--amber wa-product" data-product="Accesorio / Bolsa" data-price="Desde $50 MXN" href="#">Cotizar por WhatsApp</a>
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -133,13 +113,13 @@
       <p class="subtitle">Impresión 3D bajo pedido, colores y medidas personalizadas.</p>
 
       <div class="gallery">
-        <img src="assets/img/imp1.jpg" alt="Impresión 3D 1">
-        <img src="assets/img/imp2.jpg" alt="Impresión 3D 2">
-        <img src="assets/img/imp3.jpg" alt="Impresión 3D 3">
-        <img src="assets/img/imp4.jpg" alt="Impresión 3D 4">
-        <img src="assets/img/imp5.jpg" alt="Impresión 3D 5">
-        <img src="assets/img/imp6.jpg" alt="Impresión 3D 6">
-        <img src="assets/img/imp7.jpg" alt="Impresión 3D 7">
+        <img src="assets/img/imp1.png">
+        <img src="assets/img/imp2.png">
+        <img src="assets/img/imp3.png">
+        <img src="assets/img/imp4.png">
+        <img src="assets/img/imp5.png">
+        <img src="assets/img/imp6.png">
+        <img src="assets/img/imp7.png">
       </div>
     </div>
   </section>
@@ -147,17 +127,11 @@
   <!-- CTA FINAL -->
   <section id="pedido" class="section section--cta">
     <div class="container">
-      <div class="bigline">
-        ¿TIENES UNA IDEA? <span>NOSOTROS</span> LA HACEMOS <span>REAL</span>.
-      </div>
-
-      <a id="btnFinalWA" class="btn btn--green btn--xl" href="#" target="_blank" rel="noopener">
-        Hacer pedido por WhatsApp
-      </a>
+      <div class="bigline">¿TIENES UNA IDEA? <span>NOSOTROS</span> LA HACEMOS <span>REAL</span>.</div>
+      <a id="btnFinalWA" class="btn btn--green btn--xl" href="#">Hacer pedido por WhatsApp</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__row">
       <div>© <span id="year"></span> MC Design</div>

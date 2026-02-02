@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MC Design Store</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <span class="brand__logo">MC</span>
+      <div class="brand__text">
+        <h1 class="brand__name">MC Design</h1>
+        <p class="brand__tagline">Tu estilo no se copia, se diseña</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="cart-btn" type="button" onclick="toggleCart()">
+      🛒 Carrito (<span id="cart-count">0</span>)
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero__content">
+      <h2>Playeras, sudaderas y artículos 3D personalizados</h2>
+      <p>Diseños únicos, impresión de calidad y productos hechos a tu estilo.</p>
+      <a class="btn" href="#tienda">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- TIENDA -->
+  <main id="tienda" class="section">
+    <h2 class="section__title">Tienda</h2>
+
+    <div class="grid">
+      <!-- Producto 1 -->
+      <article class="card">
+        <div class="card__img">
+          <!-- Cambia la imagen luego (por ahora es un placeholder) -->
+          <img src="https://via.placeholder.com/600x400?text=Playera+Personalizada" alt="Playera personalizada" />
+        </div>
+        <div class="card__body">
+          <h3>Playera Personalizada</h3>
+          <p class="price">$350 MXN</p>
+          <button class="btn btn--dark" onclick="addToCart('Playera Personalizada', 350)">Agregar</button>
+        </div>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="card">
+        <div class="card__img">
+          <img src="https://via.placeholder.com/600x400?text=Sudadera+Personalizada" alt="Sudadera personalizada" />
+        </div>
+        <div class="card__body">
+          <h3>Sudadera Personalizada</h3>
+          <p class="price">$550 MXN</p>
+          <button class="btn btn--dark" onclick="addToCart('Sudadera Personalizada', 550)">Agregar</button>
+        </div>
+      </article>
+
+      <!-- Producto 3 -->
+      <article class="card">
+        <div class="card__img">
+          <img src="https://via.placeholder.com/600x400?text=Impresion+3D" alt="Impresión 3D" />
+        </div>
+        <div class="card__body">
+          <h3>Impresión 3D</h3>
+          <p class="price">$200 MXN</p>
+          <button class="btn btn--dark" onclick="addToCart('Impresión 3D', 200)">Agregar</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- CARRITO (panel) -->
+  <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+    <div class="cart-panel__header">
+      <h2>Tu carrito</h2>
+      <button class="btn btn--dark" onclick="toggleCart()">Cerrar</button>
+    </div>
+
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="cart-panel__footer">
+      <p>Total: <strong>$<span id="cart-total">0</span> MXN</strong></p>
+      <button class="btn" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section section--light">
+    <h2 class="section__title">Contacto</h2>
+
+    <div class="contact">
+      <p>¿Quieres cotizar o personalizar? Escríbeme y lo armamos a tu gusto.</p>
+
+      <!-- Cambia tu número en el link de WhatsApp -->
+      <a class="btn" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">
+        📲 WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> MC Design. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

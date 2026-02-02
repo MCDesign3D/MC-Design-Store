@@ -15,8 +15,7 @@
 
       <!-- LOGO -->
       <a class="brand" href="#video">
-        <img src="assets/img/logo-mc-header.png
-" alt="MC Design" class="brand__logo">
+        <img src="assets/img/logo-mc-header.png" alt="MC Design" class="brand__logo">
         <div class="brand__text">
           <div class="brand__name">MC DESIGN</div>
           <div class="brand__tagline">Ropa & Personalizados</div>
@@ -51,10 +50,13 @@
       </div>
 
       <div class="cta-block">
-        <a class="btn btn--green" href="#">
+        <!-- ✅ ID para que JS ponga link -->
+        <a id="btnVideoWA" class="btn btn--green" href="#" target="_blank" rel="noopener">
           Ordenar por WhatsApp
         </a>
-        <div class="cta-phone">+52 XXX XXX XXXX</div>
+
+        <!-- ✅ ID para que JS ponga el número -->
+        <div class="cta-phone" id="phoneText">+52 XXX XXX XXXX</div>
       </div>
     </div>
   </section>
@@ -67,34 +69,59 @@
 
       <div class="grid">
         <article class="product">
-          <img src="assets/img/PlayeraPoloChecoPerezFrente.png">
+          <img src="assets/img/PlayeraPoloChecoPerezFrente.png" alt="Playera personalizada">
           <div class="product__info">
             <div class="product__price">Desde $200 MXN</div>
-            <a class="btn btn--amber" href="#">Cotizar por WhatsApp</a>
+            <!-- ✅ Clase wa-product + data- -->
+            <a class="btn btn--amber wa-product"
+               data-product="Playera personalizada"
+               data-price="Desde $200 MXN"
+               href="#"
+               target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
           </div>
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa2.png">
+          <img src="assets/img/ropa2.png" alt="Playera diseño especial">
           <div class="product__info">
             <div class="product__price">Desde $200 MXN</div>
-            <a class="btn btn--amber" href="#">Cotizar por WhatsApp</a>
+            <a class="btn btn--amber wa-product"
+               data-product="Playera diseño especial"
+               data-price="Desde $200 MXN"
+               href="#"
+               target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
           </div>
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa3.png">
+          <img src="assets/img/ropa3.png" alt="Sudadera personalizada">
           <div class="product__info">
             <div class="product__price">Desde $350 MXN</div>
-            <a class="btn btn--amber" href="#">Cotizar por WhatsApp</a>
+            <a class="btn btn--amber wa-product"
+               data-product="Sudadera / Hoodie"
+               data-price="Desde $350 MXN"
+               href="#"
+               target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
           </div>
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa4.png">
+          <img src="assets/img/ropa4.png" alt="Accesorio personalizado">
           <div class="product__info">
             <div class="product__price">Desde $50 MXN</div>
-            <a class="btn btn--amber" href="#">Cotizar por WhatsApp</a>
+            <a class="btn btn--amber wa-product"
+               data-product="Accesorio / Bolsa"
+               data-price="Desde $50 MXN"
+               href="#"
+               target="_blank" rel="noopener">
+              Cotizar por WhatsApp
+            </a>
           </div>
         </article>
       </div>
@@ -108,13 +135,13 @@
       <p class="subtitle">Impresión 3D bajo pedido, colores y medidas personalizadas.</p>
 
       <div class="gallery">
-        <img src="assets/img/imp1.png">
-        <img src="assets/img/imp2.png">
-        <img src="assets/img/imp3.png">
-        <img src="assets/img/imp4.png">
-        <img src="assets/img/imp5.png">
-        <img src="assets/img/imp6.png">
-        <img src="assets/img/imp7.png">
+        <img src="assets/img/imp1.png" alt="Impresión 1">
+        <img src="assets/img/imp2.png" alt="Impresión 2">
+        <img src="assets/img/imp3.png" alt="Impresión 3">
+        <img src="assets/img/imp4.png" alt="Impresión 4">
+        <img src="assets/img/imp5.png" alt="Impresión 5">
+        <img src="assets/img/imp6.png" alt="Impresión 6">
+        <img src="assets/img/imp7.png" alt="Impresión 7">
       </div>
     </div>
   </section>
@@ -125,16 +152,22 @@
       <div class="bigline">
         ¿TIENES UNA IDEA? <span>NOSOTROS</span> LA HACEMOS <span>REAL</span>.
       </div>
-      <a class="btn btn--green btn--xl" href="#">Hacer pedido por WhatsApp</a>
+
+      <!-- ✅ ID para que JS ponga link -->
+      <a id="btnFinalWA" class="btn btn--green btn--xl" href="#" target="_blank" rel="noopener">
+        Hacer pedido por WhatsApp
+      </a>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer__row">
-      <div>© 2026 MC Design</div>
+      <div>© <span id="year"></span> MC Design</div>
       <div class="muted">Hecho para GitHub Pages</div>
     </div>
   </footer>
 
+  <!-- ✅ IMPORTANTE: CARGAR JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>

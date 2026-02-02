@@ -14,8 +14,8 @@
     <div class="container header__bar">
 
       <!-- LOGO -->
-      <a class="brand" href="#video">
-        <img src="assets/img/logo-mc-header.png" alt="MC Design" class="brand__logo">
+      <a class="brand" href="#video" aria-label="Ir a sección Video">
+        <img src="assets/img/logo-mc-header.png" alt="Logo MC Design" class="brand__logo">
         <div class="brand__text">
           <div class="brand__name">MC DESIGN</div>
           <div class="brand__tagline">Ropa & Personalizados</div>
@@ -23,7 +23,7 @@
       </a>
 
       <!-- MENÚ -->
-      <nav class="nav">
+      <nav class="nav" aria-label="Menú principal">
         <a href="#video">Video</a>
         <a href="#ropa">Ropa</a>
         <a href="#impresiones">Impresiones 3D</a>
@@ -44,6 +44,7 @@
           src="https://www.youtube.com/embed/C4735Hl6OOY"
           title="MC Design Video"
           frameborder="0"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
@@ -69,7 +70,7 @@
 
       <div class="grid">
         <article class="product">
-          <img src="assets/img/PlayeraPoloChecoPerezFrente.png" alt="Playera personalizada">
+          <img src="assets/img/PlayeraPoloChecoPerezFrente.png" alt="Playera personalizada" loading="lazy">
           <div class="product__info">
             <div class="product__price">Desde $200 MXN</div>
             <!-- ✅ Clase wa-product + data- -->
@@ -84,7 +85,7 @@
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa2.png" alt="Playera diseño especial">
+          <img src="assets/img/ropa2.png" alt="Playera diseño especial" loading="lazy">
           <div class="product__info">
             <div class="product__price">Desde $200 MXN</div>
             <a class="btn btn--amber wa-product"
@@ -98,7 +99,7 @@
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa3.png" alt="Sudadera personalizada">
+          <img src="assets/img/ropa3.png" alt="Sudadera personalizada" loading="lazy">
           <div class="product__info">
             <div class="product__price">Desde $350 MXN</div>
             <a class="btn btn--amber wa-product"
@@ -112,7 +113,7 @@
         </article>
 
         <article class="product">
-          <img src="assets/img/ropa4.png" alt="Accesorio personalizado">
+          <img src="assets/img/ropa4.png" alt="Accesorio personalizado" loading="lazy">
           <div class="product__info">
             <div class="product__price">Desde $50 MXN</div>
             <a class="btn btn--amber wa-product"
@@ -135,13 +136,13 @@
       <p class="subtitle">Impresión 3D bajo pedido, colores y medidas personalizadas.</p>
 
       <div class="gallery">
-        <img src="assets/img/imp1.png" alt="Impresión 1">
-        <img src="assets/img/imp2.png" alt="Impresión 2">
-        <img src="assets/img/imp3.png" alt="Impresión 3">
-        <img src="assets/img/imp4.png" alt="Impresión 4">
-        <img src="assets/img/imp5.png" alt="Impresión 5">
-        <img src="assets/img/imp6.png" alt="Impresión 6">
-        <img src="assets/img/imp7.png" alt="Impresión 7">
+        <img src="assets/img/imp1.png" alt="Impresión 3D 1" loading="lazy">
+        <img src="assets/img/imp2.png" alt="Impresión 3D 2" loading="lazy">
+        <img src="assets/img/imp3.png" alt="Impresión 3D 3" loading="lazy">
+        <img src="assets/img/imp4.png" alt="Impresión 3D 4" loading="lazy">
+        <img src="assets/img/imp5.png" alt="Impresión 3D 5" loading="lazy">
+        <img src="assets/img/imp6.png" alt="Impresión 3D 6" loading="lazy">
+        <img src="assets/img/imp7.png" alt="Impresión 3D 7" loading="lazy">
       </div>
     </div>
   </section>
@@ -163,11 +164,12 @@
   <footer class="footer">
     <div class="container footer__row">
       <div>© <span id="year"></span> MC Design</div>
-      <div class="muted">Pages</div>
+      <div class="muted">Hecho por MauricioCardona</div>
     </div>
   </footer>
 
-  <!-- ✅ IMPORTANTE: CARGAR JS -->
-  <script src="js/script.js"></script>
+  <!-- ✅ IMPORTANTE: CARGAR JS (ANTI-CACHE) -->
+  <script src="js/script.js?v=4"></script>
 </body>
 </html>
+

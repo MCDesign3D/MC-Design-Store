@@ -18,13 +18,13 @@ body{background:#0b0b0b;color:#fff}
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:20px;
   text-decoration:none;
   color:#fff;
 }
 .brand__logo{
-  width:42px;
-  height:42px;
+  width:60px;
+  height:60px;
   object-fit:contain;
   filter:drop-shadow(0 0 6px rgba(255,0,0,.35));
 }

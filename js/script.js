@@ -1,57 +1,59 @@
-const YEAR = document.getElementById("year");
-if (YEAR) YEAR.textContent = new Date().getFullYear();
+const CONTACT = {
+  primaryWhatsApp: "4447947990",
+  secondaryPhone: "4401704214",
+  countryCode: "52"
+};
 
-/**
- * Número base (known good)
- * NO pongas espacios ni guiones aquí
- */
-const PHONE_10_DIGITS = "4447947990";
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
 
-/**
- * Formato visual bonito: 444 794 7990
- */
 function formatPhoneMX(phone) {
-  return phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
+  const cleaned = String(phone).replace(/\D/g, "");
+  return cleaned.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
 }
 
-/**
- * Link real de WhatsApp (wa.me necesita solo números)
- */
-function waLink(message) {
-  const phone = `52${PHONE_10_DIGITS}`;
-  const text = encodeURIComponent(message);
-  return `https://wa.me/${phone}?text=${text}`;
+function makeWaLink(message) {
+  const phone = `${CONTACT.countryCode}${CONTACT.primaryWhatsApp}`;
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 
-// Elementos
-const btnVideo = document.getElementById("btnVideoWA");
-const btnFinal = document.getElementById("btnFinalWA");
-const phoneText = document.getElementById("phoneText");
-
-// Mostrar teléfono bonito
-if (phoneText) {
-  phoneText.textContent = `+52 ${formatPhoneMX(PHONE_10_DIGITS)}`;
+function makeTelLink(phone) {
+  return `tel:+${CONTACT.countryCode}${String(phone).replace(/\D/g, "")}`;
 }
 
-// Botón video
-if (btnVideo) {
-  btnVideo.href = waLink(
-    "Hola MC Design 👋 Quiero hacer un pedido. ¿Me das info y catálogo?"
-  );
+function setLink(id, href, text) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.href = href;
+  if (text) el.textContent = text;
 }
 
-// Botón final
-if (btnFinal) {
-  btnFinal.href = waLink(
-    "Hola MC Design 👋 Tengo una idea y quiero cotizar un pedido. ¿Me ayudas?"
-  );
-}
+const primaryLabel = `+52 ${formatPhoneMX(CONTACT.primaryWhatsApp)}`;
+const secondaryLabel = `+52 ${formatPhoneMX(CONTACT.secondaryPhone)}`;
 
-// Botones por producto
-document.querySelectorAll(".wa-product").forEach(a => {
-  const prod = a.dataset.product || "Producto";
-  const price = a.dataset.price || "";
-  a.href = waLink(
-    `Hola MC Design 👋 Quiero cotizar: ${prod}. ${price}. ¿Me das opciones y tiempos?`
-  );
+setLink(
+  "btnHeroWA",
+  makeWaLink("Hola MC Design 👋 Quiero cotizar un producto personalizado. ¿Me compartes opciones?"),
+);
+setLink(
+  "btnVideoWA",
+  makeWaLink("Hola MC Design 👋 Vi su video y quiero más información sobre sus productos personalizados."),
+);
+setLink(
+  "btnFinalWA",
+  makeWaLink("Hola MC Design 👋 Quiero hacer un pedido personalizado. ¿Me apoyas con la cotización?"),
+);
+setLink(
+  "floatingWA",
+  makeWaLink("Hola MC Design 👋 Me interesa cotizar un producto personalizado."),
+);
+
+setLink("heroPhonePrimary", makeWaLink("Hola MC Design 👋 Quiero información sobre sus servicios."), primaryLabel);
+setLink("heroPhoneAlt", makeTelLink(CONTACT.secondaryPhone), secondaryLabel);
+setLink("contactPrimary", makeWaLink("Hola MC Design 👋 Quiero información y catálogo."), `WhatsApp principal: ${primaryLabel}`);
+setLink("contactAlt", makeTelLink(CONTACT.secondaryPhone), `Contacto alterno: ${secondaryLabel}`);
+
+document.querySelectorAll(".wa-product").forEach((button) => {
+  const product = button.dataset.product || "producto personalizado";
+  button.href = makeWaLink(`Hola MC Design 👋 Quiero cotizar ${product}. ¿Me das opciones y tiempos de entrega?`);
 });

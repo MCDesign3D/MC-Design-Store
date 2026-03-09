@@ -3,173 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MC Design Store</title>
+  <title>MC Design Creative Studio | Diseño, impresión 3D y personalizados</title>
+  <meta
+    name="description"
+    content="MC Design Creative Studio: diseño, impresión 3D, playeras, llaveros, stickers, sublimación y detalles personalizados para cualquier ocasión en San Luis Potosí."
+  />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-
-  <!-- HEADER -->
   <header class="header">
     <div class="container header__bar">
-
-      <!-- LOGO -->
-      <a class="brand" href="#video" aria-label="Ir a sección Video">
-        <img src="assets/img/logo-mc-header.png" alt="Logo MC Design" class="brand__logo">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="assets/img/logo-mc-header.png" alt="Logo MC Design Creative Studio" class="brand__logo" />
         <div class="brand__text">
-          <div class="brand__name">MC DESIGN CREATIVE STUDIO</div>
-          <div class="brand__tagline">Ropa & Personalizados</div>
+          <span class="brand__name">MC Design</span>
+          <span class="brand__tagline">Creative Studio</span>
         </div>
       </a>
 
-      <!-- MENÚ -->
       <nav class="nav" aria-label="Menú principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
         <a href="#video">Video</a>
-        <a href="#ropa">Ropa</a>
-        <a href="#impresiones">Impresiones 3D</a>
-        <a href="#pedido">Pedido</a>
+        <a href="#contacto">Contacto</a>
       </nav>
-
     </div>
   </header>
 
-  <!-- VIDEO -->
-  <section id="video" class="section">
-    <div class="container">
-      <h2 class="title">Mira Nuestro Video</h2>
-      <div class="divider"></div>
+  <main>
+    <section id="inicio" class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__content frame">
+          <p class="eyebrow">Diseño • Impresión 3D • Personalizados</p>
+          <h1>Detalles personalizados para cualquier ocasión</h1>
+          <p class="hero__lead">
+            En <strong>MC Design Creative Studio</strong> convertimos tus ideas en productos únicos.
+            Creamos playeras, llaveros, stickers, sublimación, artículos promocionales e impresión 3D
+            con un estilo profesional, moderno y totalmente personalizado.
+          </p>
 
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/C4735Hl6OOY"
-          title="MC Design Video"
-          frameborder="0"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="cta-block">
-        <!-- ✅ ID para que JS ponga link -->
-        <a id="btnVideoWA" class="btn btn--green" href="#" target="_blank" rel="noopener">
-          Ordenar por WhatsApp
-        </a>
-
-        <!-- ✅ ID para que JS ponga el número -->
-        <div class="cta-phone" id="phoneText">+52 XXX XXX XXXX</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROPA -->
-  <section id="ropa" class="section">
-    <div class="container">
-      <h2 class="title">Ropa Personalizada</h2>
-      <div class="divider"></div>
-
-      <div class="grid">
-        <article class="product">
-          <img src="assets/img/PlayeraPoloChecoPerezFrente.png" alt="Playera personalizada" loading="lazy">
-          <div class="product__info">
-            <div class="product__price">Desde $200 MXN</div>
-            <!-- ✅ Clase wa-product + data- -->
-            <a class="btn btn--amber wa-product"
-               data-product="Playera personalizada"
-               data-price="Desde $200 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+          <div class="hero__chips">
+            <span>Playeras</span>
+            <span>Llaveros</span>
+            <span>Stickers</span>
+            <span>Sublimación</span>
+            <span>DTF</span>
+            <span>Vinil</span>
           </div>
-        </article>
 
-        <article class="product">
-          <img src="assets/img/Checoespalda.png" alt="Playera diseño especial" loading="lazy">
-          <div class="product__info">
-            <div class="product__price">Desde $350 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Playera diseño especial"
-               data-price="Desde $350 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+          <div class="hero__actions">
+            <a id="btnHeroWA" class="btn btn--primary" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
           </div>
-        </article>
 
-        <article class="product">
-          <img src="assets/img/Sudadera.png" alt="Sudadera personalizada" loading="lazy">
-          <div class="product__info">
-            <div class="product__price">Desde $350 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Sudadera / Hoodie"
-               data-price="Desde $350 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+          <div class="hero__contact">
+            <div>
+              <span class="contact-label">WhatsApp</span>
+              <a id="heroPhonePrimary" href="#"></a>
+            </div>
+            <div>
+              <span class="contact-label">Contacto alterno</span>
+              <a id="heroPhoneAlt" href="#"></a>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="product">
-          <img src="assets/img/sudaderamujer.png" alt="Accesorio personalizado" loading="lazy">
-          <div class="product__info">
-            <div class="product__price">Desde $350 MXN</div>
-            <a class="btn btn--amber wa-product"
-               data-product="Accesorio / Bolsa"
-               data-price="Desde $350 MXN"
-               href="#"
-               target="_blank" rel="noopener">
-              Cotizar por WhatsApp
-            </a>
+        <div class="hero__visual frame">
+          <img src="assets/img/business-card-reference.png" alt="Tarjeta de presentación MC Design Creative Studio" class="hero__card" />
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <p class="section__eyebrow">Lo que hacemos</p>
+        <h2 class="title">Servicios principales</h2>
+        <p class="subtitle">
+          Basamos el diseño de la página en la estética de tu tarjeta: negro, rojo, blanco y un estilo premium.
+        </p>
+
+        <div class="services">
+          <article class="service-card frame">
+            <span class="service-card__icon">✦</span>
+            <h3>Diseño digital</h3>
+            <p>Diseños personalizados para regalos, marcas, eventos y proyectos especiales.</p>
+          </article>
+
+          <article class="service-card frame">
+            <span class="service-card__icon">3D</span>
+            <h3>Impresión 3D</h3>
+            <p>Figuras, decoración, piezas personalizadas y prototipos con acabados de calidad.</p>
+          </article>
+
+          <article class="service-card frame">
+            <span class="service-card__icon">DTF</span>
+            <h3>Playeras y textiles</h3>
+            <p>Aplicación en prendas personalizadas para negocio, eventos, equipos o regalo.</p>
+          </article>
+
+          <article class="service-card frame">
+            <span class="service-card__icon">◉</span>
+            <h3>Stickers y vinil</h3>
+            <p>Etiquetas, stickers, calcomanías y detalles adhesivos con diseño a tu medida.</p>
+          </article>
+
+          <article class="service-card frame">
+            <span class="service-card__icon">☕</span>
+            <h3>Sublimación</h3>
+            <p>Termos, tazas y artículos promocionales listos para personalizar cualquier ocasión.</p>
+          </article>
+
+          <article class="service-card frame">
+            <span class="service-card__icon">❤</span>
+            <h3>Detalles personalizados</h3>
+            <p>Llaveros, recuerdos y regalos hechos para destacar con tu estilo o temática.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section section--alt">
+      <div class="container">
+        <p class="section__eyebrow">Trabajos destacados</p>
+        <h2 class="title">Galería de productos</h2>
+        <p class="subtitle">Ejemplos visuales de ropa, impresión 3D y productos personalizados.</p>
+
+        <div class="showcase">
+          <article class="product-card frame">
+            <img src="assets/img/PlayeraPoloChecoPerezFrente.png" alt="Playera personalizada frente" loading="lazy" />
+            <div class="product-card__body">
+              <h3>Playeras personalizadas</h3>
+              <p>Diseños para uso personal, negocio, eventos o regalos especiales.</p>
+              <a class="btn btn--secondary wa-product" href="#" data-product="Playera personalizada">Solicitar cotización</a>
+            </div>
+          </article>
+
+          <article class="product-card frame">
+            <img src="assets/img/Sudadera.png" alt="Sudadera personalizada" loading="lazy" />
+            <div class="product-card__body">
+              <h3>Sudaderas y hoodies</h3>
+              <p>Prendas personalizadas con acabado llamativo y diseño a tu gusto.</p>
+              <a class="btn btn--secondary wa-product" href="#" data-product="Sudadera personalizada">Solicitar cotización</a>
+            </div>
+          </article>
+
+          <article class="product-card frame">
+            <img src="assets/img/accesorios.png" alt="Accesorios personalizados" loading="lazy" />
+            <div class="product-card__body">
+              <h3>Accesorios</h3>
+              <p>Artículos promocionales y complementos personalizados con identidad propia.</p>
+              <a class="btn btn--secondary wa-product" href="#" data-product="Accesorios personalizados">Solicitar cotización</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="assets/img/Checoespalda.png" alt="Diseño especial en playera" loading="lazy" />
+          <img src="assets/img/sudaderamujer.png" alt="Prenda personalizada" loading="lazy" />
+          <img src="assets/img/corazon3d.png" alt="Figura de corazón impresa en 3D" loading="lazy" />
+          <img src="assets/img/batman.png" alt="Figura Batman impresa en 3D" loading="lazy" />
+          <img src="assets/img/Checoperezpoloblanca.png" alt="Polo personalizada" loading="lazy" />
+          <img src="assets/img/logo-mc.png" alt="Identidad visual MC Design" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container process-wrap frame">
+        <div>
+          <p class="section__eyebrow">Cómo trabajamos</p>
+          <h2 class="title title--left">Proceso rápido de pedido</h2>
+          <p class="subtitle subtitle--left">
+            Una página más clara también ayuda a que tus clientes sepan cómo pedirte.
+          </p>
+        </div>
+
+        <div class="process">
+          <article>
+            <span>01</span>
+            <h3>Cuéntanos tu idea</h3>
+            <p>Comparte por WhatsApp tu idea, medida, cantidad o temática.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Recibe propuesta</h3>
+            <p>Te mostramos opciones de diseño, materiales y tiempos de entrega.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Producción personalizada</h3>
+            <p>Fabricamos tu pedido con el estilo y acabado que buscas.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Entrega o envío</h3>
+            <p>Listo para recoger, regalar, vender o lucir en tu evento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section section--alt">
+      <div class="container video-section">
+        <div>
+          <p class="section__eyebrow">Contenido visual</p>
+          <h2 class="title title--left">Video destacado</h2>
+          <p class="subtitle subtitle--left">
+            Mantuvimos la sección de video para que puedas mostrar contenido o promociones de tu marca.
+          </p>
+          <a id="btnVideoWA" class="btn btn--primary" href="#" target="_blank" rel="noopener">Pedir información</a>
+        </div>
+
+        <div class="video-embed frame">
+          <iframe
+            src="https://www.youtube.com/embed/C4735Hl6OOY"
+            title="MC Design Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="frame contact-card">
+          <p class="section__eyebrow">Contacto</p>
+          <h2 class="title title--left">Haz tu pedido hoy</h2>
+          <p class="subtitle subtitle--left">
+            Página corregida, más completa y con una imagen visual alineada a tu tarjeta de presentación.
+          </p>
+
+          <div class="contact-list">
+            <a id="contactPrimary" href="#"></a>
+            <a id="contactAlt" href="#"></a>
           </div>
-        </article>
+
+          <div class="contact-actions">
+            <a id="btnFinalWA" class="btn btn--primary btn--xl" href="#" target="_blank" rel="noopener">Enviar mensaje</a>
+          </div>
+        </div>
+
+        <div class="frame contact-note">
+          <h3>Ideal para:</h3>
+          <ul>
+            <li>Regalos personalizados</li>
+            <li>Eventos y recuerdos</li>
+            <li>Artículos para negocio</li>
+            <li>Promocionales y branding</li>
+            <li>Decoración y piezas 3D</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- IMPRESIONES 3D -->
-  <section id="impresiones" class="section">
-    <div class="container">
-      <h2 class="title">Impresiones 3D</h2>
-      <p class="subtitle">Impresión 3D bajo pedido, colores y medidas personalizadas.</p>
-
-      <div class="gallery">
-        <img src="assets/img/corazon3d.png" alt="Impresión 3D 1" loading="lazy">
-        <img src="assets/img/accesorios.png" alt="Impresión 3D 2" loading="lazy">
-        <img src="assets/img/batman.png" alt="Impresión 3D 3" loading="lazy">
-        <img src="assets/img/imp4.png" alt="Impresión 3D 4" loading="lazy">
-        <img src="assets/img/imp5.png" alt="Impresión 3D 5" loading="lazy">
-        <img src="assets/img/imp6.png" alt="Impresión 3D 6" loading="lazy">
-        <img src="assets/img/imp7.png" alt="Impresión 3D 7" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section id="pedido" class="section section--cta">
-    <div class="container">
-      <div class="bigline">
-        ¿TIENES UNA IDEA? <span>NOSOTROS</span> LA HACEMOS <span>REALIDAD</span>.
-      </div>
-
-      <!-- ✅ ID para que JS ponga link -->
-      <a id="btnFinalWA" class="btn btn--green btn--xl" href="#" target="_blank" rel="noopener">
-        Hacer pedido por WhatsApp
-      </a>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer__row">
-      <div>© <span id="year"></span> MC Design</div>
-      <div class="muted">Design by MC</div>
+      <div>© <span id="year"></span> MC Design Creative Studio</div>
+      <div>Diseño web con estética basada en tu tarjeta</div>
     </div>
   </footer>
 
-  <!-- ✅ IMPORTANTE: CARGAR JS (ANTI-CACHE) -->
-  <script src="js/script.js?v=4"></script>
+  <a id="floatingWA" class="floating-wa" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WA</a>
+
+  <script src="js/script.js?v=6"></script>
 </body>
 </html>
-

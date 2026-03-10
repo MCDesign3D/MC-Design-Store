@@ -122,7 +122,7 @@ button,input,textarea,select{font:inherit}
   margin-bottom:16px;
 }
 .hero h1{
-  font-size:clamp(1.9rem, 3.2vw, 3.6rem);
+  font-size:clamp(1.9rem, 2.9vw, 3rem);
   line-height:1.05;
   max-width:10ch;
   margin-bottom:20px;
